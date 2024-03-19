@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { catchAsync } from "../../utils/catchAsync.js";
-import alumniServices from "../../services/alumni/index.js";
+import { catchAsync } from "../utils/catchAsync.js";
+import alumniServices from "../services/alumni.js";
 const router = Router();
 
 router.post(
@@ -22,7 +22,6 @@ router.post(
       offerLetterLink,
       linkedIn,
     } = req.body;
-
 
     const result = await alumniServices.create(
       fullName,

@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { catchAsync } from "../../utils/catchAsync.js";
-import eventServices from "../../services/event/index.js";
+import { catchAsync } from "../utils/catchAsync.js";
+import eventServices from "../services/event.js";
 
 const router = Router();
 

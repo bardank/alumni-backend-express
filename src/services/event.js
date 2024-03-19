@@ -1,25 +1,9 @@
-import UserModel from "../../models/User.js";
-import AlumniModel from "../../models/Alumni.js";
+import EventModel from "../models/Event.js";
 
-const create = async (
-  fullName,
-  email,
-  phoneNumber,
-  currentAddress,
-  usn,
-  branch,
-  isPlacementProvidedBySkit,
-  isApproved,
-  yearOfCompletion,
-  presentOrganization,
-  currentPosition,
-  suggestion,
-  offerLetterLink,
-  linkedIn
-) => {
+const create = async (createdBy, eventName, date, location, image) => {
   const response = {};
   const userId = false;
-  const alumni = await AlumniModel.create({
+  const alumni = await EventModel.create({
     fullName,
     email,
     phoneNumber,
@@ -45,8 +29,8 @@ const create = async (
   return response;
 };
 
-const alumniServices = {
+const eventServices = {
   create,
 };
 
-export default alumniServices;
+export default eventServices;
